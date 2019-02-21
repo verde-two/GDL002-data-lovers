@@ -1,0 +1,15 @@
+* {
+    margin: 0;
+    text-align: center;
+}
+.grid {
+    grid: display;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: repeat(9, 1fr);
+}
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 15px;
+    padding: 1rem;
+    margin: 1rem;
+}
