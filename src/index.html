@@ -5,16 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Pokediscover</title>
     <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Oswald|Slackey" rel="stylesheet">
   </head>
   <body>
 
     <nav>
-
+      <ul>
+        <li><a href=""><img src="img/pokediscover.png" width="150"></a></li>
+        <li><a href=""></a>POKÉDEX</a></li>
+        <li><a href=""></a>DESCUBRIR PRIMER POKÉMON</a></li>
+        <li><a href=""></a>IR A ESTADÍSTICAS</a></li>
+        <li><a href=""></a>INSTALAR POKÉMON GO</a></li>
+    </ul>
     </nav>
 
-    <main>  
-        <div id="cards" class="grid">
-        </div>
+    <main id="main-interaction">
+      <img src="img/pokedex.png" alt="" width="220">
+      <h3>En la pokédex puedes encontrar todos los datos acerca de los 151 pokémon que existen en la región de Kanto, esto te ayudará a capturar tus pokémon favoritos.</h3>
+      <select name="select" id="filterSelect">
+          <option value="value1" selected>FILTRAR POR TIPO</option>
+          <option value="value2">Normal (Normal)</option> 
+          <option value="value3">Fire (Fuego)</option>
+          <option value="value4">Water (Agua)</option>
+        </select>
+      <div id="cards" class="grid">
+      </div>
     </main>
 
     <section>
