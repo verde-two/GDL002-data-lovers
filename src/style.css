@@ -16,6 +16,24 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+    overflow: scroll;
+}
+#container {
+    align-items: center;
+    justify-content: center;
+}
+#instalarApp {
+    height: 400px;
+}
+#filterSelect {
+    color: #ffffff;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.2rem;
+    width: 340px;
+    height: 40px;
+    background-color: #323131;
+    border: 0;
+    border-radius: 10px;
 }
 .grid {
     grid: display;
@@ -31,7 +49,7 @@
     border-radius: 15px;
     padding: 1rem;
     margin: 0.8rem;
-    max-width: 14.5rem;
+    max-width: 13.5rem;
     float: left;
 }
 nav {
@@ -47,3 +65,13 @@ h3 {
     margin-top: 1.8rem;
     margin-bottom: 1.5rem;
 }
+footer {
+    font-family: 'Slackey', cursive;
+    font-size: 1rem;
+    color: #ffffff;
+    text-align: center;
+    padding-top: 1.6rem;
+    background-color: #151515;
+    height: 3.5rem;
+ }
+ 

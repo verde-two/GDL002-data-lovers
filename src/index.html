@@ -12,47 +12,50 @@
     <nav>
       <ul>
         <li><a href=""><img src="img/pokediscover.png" width="150"></a></li>
-        <li><a href=""></a>POKÉDEX</a></li>
-        <li><a href=""></a>DESCUBRIR PRIMER POKÉMON</a></li>
-        <li><a href=""></a>IR A ESTADÍSTICAS</a></li>
-        <li><a href=""></a>INSTALAR POKÉMON GO</a></li>
+        <li><a href="">POKÉDEX</a></li>
+        <li><a href="">DESCUBRIR PRIMER POKÉMON</a></li>
+        <li><a href="">IR A ESTADÍSTICAS</a></li>
+        <li><a href="">INSTALAR POKÉMON GO</a></li>
     </ul>
     </nav>
 
     <main id="main-interaction">
-      <img src="img/pokedex.png" alt="" width="220">
-      <h3>En la pokédex puedes encontrar todos los datos acerca de los 151 pokémon que existen en la región de Kanto, esto te ayudará a capturar tus pokémon favoritos.</h3>
-      <select name="select" id="filterSelect">
-          <option value="value0">FILTRAR POR TIPO</option>
-          <option value="All" selected>Todos los tipos</option>
-          <option value="Normal">Normal</option> 
-          <option value="Fire">Fuego</option>
-          <option value="Water">Agua</option>
-          <option value="Grass">Hierba / Planta</option> 
-          <option value="Electric">Eléctrico</option>
-          <option value="Ice">Hielo</option>
-          <option value="Fighting">Lucha</option> 
-          <option value="Poison">Veneno</option>
-          <option value="Ground">Tierra</option>
-          <option value="Rock">Roca</option> 
-          <option value="Flying">Volador</option>
-          <option value="Psychic">Psíquico</option>
-          <option value="Bug">Insecto / Bicho</option> 
-          <option value="Ghost">Fantasma</option>
-          <option value="Dragon">Dragon</option>
-          <option value="Dark">Siniestro</option> 
-          <option value="Steel">Acero</option>
-          <option value="Fairy">Hada</option>
-        </select>
-      <div id="cards" class="grid">
+      <div id="container">
+        <img src="img/pokedex.png" alt="" width="220">
+        <h3>En la pokédex puedes encontrar todos los datos acerca de los 151 pokémon que existen en la región de Kanto, esto te ayudará a capturar tus pokémon favoritos.</h3>
+        <select name="select" id="filterSelect">
+            <option value="All" selected>FILTRAR POR TIPO</option>
+            <option value="All">Todos los tipos</option>
+            <option value="Normal">Normal</option> 
+            <option value="Fire">Fuego (Fire)</option>
+            <option value="Water">Agua (Water)</option>
+            <option value="Grass">Hierba / Planta (Grass)</option> 
+            <option value="Electric">Eléctrico (Electric)</option>
+            <option value="Ice">Hielo (Ice)</option>
+            <option value="Fighting">Lucha (Fighting)</option> 
+            <option value="Poison">Veneno (Poison)</option>
+            <option value="Ground">Tierra (Ground)</option>
+            <option value="Rock">Roca (Rock)</option> 
+            <option value="Flying">Volador (Flying)</option>
+            <option value="Psychic">Psíquico (Psychic)</option>
+            <option value="Bug">Insecto / Bicho (Bug)</option> 
+            <option value="Ghost">Fantasma (Ghost)</option>
+            <option value="Dragon">Dragon</option>
+          </select>
+          <div id="cards" class="grid"></div>
       </div>
     </main>
 
-    <section>
-
+    <section id="instalarApp">
+      <h2>Instalar Pokémon GO</h2>
+      <p>Ahora estás listo para iniciarte en la aventura pokémon</p>
+      <h1>!Descarga e instala la app!</h1>
+      <button>!Jugar ahora!</button>
+      <p>Para seguir aprendiendo sobre el juego puedes dirigirte <a href="">AQUÍ</a></p>
     </section>
-    <footer>
 
+    <footer>
+        <p>Developed by DixelTeam, 2019</p>
     </footer>
 
     <script src="./data/pokemon/pokemon.js"></script>

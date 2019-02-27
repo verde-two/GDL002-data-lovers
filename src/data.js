@@ -1,33 +1,29 @@
-//Función para mostrar pokémon
+//Función para mostrar todos los pokémon
+/*
+const showPokemon = () => {
+    const pokeObj =POKEMON.pokemon;
+    return pokeObj.map(poke => poke);
+};
+*/
+
 const showPokemon = POKEMON.pokemon.map(poke => poke);
-//console.log(showPokemon);
 
-const filterPoke = (data, pokeType) => {
+//Función para filtrar tipos de pokémon "puros"
+/*const filterPoke = (data, pokeType) => {
     return data.filter(pokemon => (pokemon.type == pokeType));
-  };
-//  console.log("este es filter Dixel", filterPoke(POKEMON.pokemon, 'Water'));
+  };*/
 
-/*const filterPoke = (data, type) => {
+//Función para filtrar tipos de pokémon "puros e impuros"V
+const filterPoke = (data, type) => {
     return data.filter((pokemon) => pokemon.type.includes(type));
-}*/
-//console.log("este es filter poke 2", filterPoke(POKEMON.pokemon, "Water"));*/
+};
+
+//Función para ordenar tipos de pokémon alfabéticamente A-Z
+//const orderPoke = () => {
+
+//};
 
 window.data = {
     showPokemon,
     filterPoke
 };
-
-
-/*const filterPoke = function (data, type){
-  const newArray = [];
-  for (let i = 0; i < data.length; i++) {
-    for (let j = 0; j < data[i].type.length; j++){
-      if (data[i].type[j] == type){
-        newArray.push(data[i]);
-      }
-    }
-
-  }
-  return newArray;
-}
-console.log(filterPoke(POKEMON.pokemon, "Grass"));*/
