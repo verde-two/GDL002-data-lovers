@@ -1,11 +1,24 @@
 //Función para mostrar pokémon
 const showPokemon = POKEMON.pokemon.map(poke => poke);
-console.log(showPokemon);
+//console.log(showPokemon);
 
-window.data = showPokemon;
+const filterPoke = (data, pokeType) => {
+    return data.filter(pokemon => (pokemon.type == pokeType));
+  };
+//  console.log("este es filter Dixel", filterPoke(POKEMON.pokemon, 'Water'));
+
+/*const filterPoke = (data, type) => {
+    return data.filter((pokemon) => pokemon.type.includes(type));
+}*/
+//console.log("este es filter poke 2", filterPoke(POKEMON.pokemon, "Water"));*/
+
+window.data = {
+    showPokemon,
+    filterPoke
+};
 
 
-const filterPoke = function (data, type){
+/*const filterPoke = function (data, type){
   const newArray = [];
   for (let i = 0; i < data.length; i++) {
     for (let j = 0; j < data[i].type.length; j++){
@@ -17,4 +30,4 @@ const filterPoke = function (data, type){
   }
   return newArray;
 }
-console.log(filterPoke(POKEMON.pokemon, "Grass"));
+console.log(filterPoke(POKEMON.pokemon, "Grass"));*/
