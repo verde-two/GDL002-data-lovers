@@ -1,6 +1,10 @@
-//Itera sobre objeto para mostrar a usuario datos específicos
-const totalPokemon = ()=>{
-  for(let i=0; i<data.length; i++) {
+//Itera sobre objeto para mostrar a usuario cards específicas
+ const createCards = (data) => { 
+    let cards = document.getElementById('cards');
+    while (cards.hasChildNodes()) {
+        cards.removeChild(cards.firstChild);
+    }
+    for(let i=0; i<data.length; i++) {
       let card = document.createElement('DIV');
       let parrNumb = document.createElement('P');
       let parrName = document.createElement('P');
@@ -20,11 +24,21 @@ const totalPokemon = ()=>{
       card.setAttribute('class', 'card');
       document.getElementById('cards').appendChild(card);
   }
-};
-const gettingType = () =>{
+}; 
+
+createCards(data.showPokemon);
+
+//Función obtiene valor de select para pasar argumento a filterPoke (función de filtrar)
+const addingFilter = () =>{
   let select = document.getElementById('filterSelect');
   let valueSelect = select.value;
-  return valueSelect;
-  //let type = document.getElementById('filterSelect').value;
-  //console.log(data.filterPoke(totalPokemon, type));
+  let filterResult;
+  if (valueSelect == "All") {
+    filterResult = data.showPokemon;
+  } else {
+    filterResult = data.filterPoke(POKEMON.pokemon, valueSelect);
+}
+  createCards(filterResult);
 };
+
+document.getElementById('filterSelect').addEventListener("change", addingFilter);
