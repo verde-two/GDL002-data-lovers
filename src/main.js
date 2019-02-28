@@ -33,7 +33,7 @@ const addingFilter = () =>{
   let select = document.getElementById('filterSelect');
   let valueSelect = select.value;
   let filterResult;
-  if (valueSelect == "All") {
+  if (valueSelect == 'All') {
     filterResult = data.showPokemon;
   } else {
     filterResult = data.filterPoke(POKEMON.pokemon, valueSelect);
@@ -42,3 +42,20 @@ const addingFilter = () =>{
 };
 
 document.getElementById('filterSelect').addEventListener("change", addingFilter);
+
+//Función obtiene valor de select para llamar función orderByNameAsc y orderByNameDes (función ordenar)
+
+const addOrder = () => {
+  let select = document.getElementById('orderSelect');
+  let valueSelect = select.value;
+  let orderResult;
+  if(valueSelect == 'Asc'){
+    orderResult = data.orderByNameAsc;
+  } else if (valueSelect == 'Des'){
+    orderResult = data.orderByNameDes;
+  } else {
+    orderResult = data.showPokemon;
+  }
+  createCards(orderResult);
+};
+document.getElementById('orderSelect').addEventListener("change", addOrder);

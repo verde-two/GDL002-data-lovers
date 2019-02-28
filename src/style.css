@@ -112,6 +112,15 @@ nav ul li a {
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: repeat(9, 1fr);
 }
+footer {
+    font-family: 'Slackey', cursive;
+    font-size: 1rem;
+    color: #ffffff;
+    text-align: center;
+    padding-top: 1.6rem;
+    background-color: #151515;
+    height: 2.8rem;
+ }
 h1 {
     font-family: 'Oswald', sans-serif;
     color: #323131;
@@ -131,13 +140,5 @@ h3 {
     font-family: 'Montserrat', sans-serif;
     color: #323131;
  }
- footer {
-    font-family: 'Slackey', cursive;
-    font-size: 1rem;
-    color: #ffffff;
-    text-align: center;
-    padding-top: 1.6rem;
-    background-color: #151515;
-    height: 2.8rem;
- }
+ 
  
