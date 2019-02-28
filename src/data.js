@@ -1,12 +1,13 @@
-//Función para mostrar todos los pokémon
+//Declaración para mostrar todos los pokémon
 const showPokemon = POKEMON.pokemon.map(poke => poke);
 
-/*
-const showPokemon = () => {
-    const pokeObj =POKEMON.pokemon;
-    return pokeObj.map(poke => poke);
+
+/*Prueba para función showPokemon
+const showPokemon = (POKEMON) => {
+    //let pokeObj = POKEMON.pokemon;
+    return POKEMON.pokemon.map(poke => poke);
 };
-*/
+console.log(showPokemon(POKEMON.pokemon));*/
 
 
 //Función para filtrar tipos de pokémon "puros"

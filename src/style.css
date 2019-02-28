@@ -19,7 +19,7 @@ header {
     width: 100%;
     position: fixed;
     z-index: 100;
-    background-image: linear-gradient(#0c17f5, #73c1f5);   
+    background-image: linear-gradient(#0c17f5, #73c1f5);
 }
 nav {
     float: right;
@@ -43,17 +43,15 @@ nav ul li a {
     text-decoration: none;
 }
 #main-interaction {
-    padding-top: 100px; 
+    padding-top: 100px;
     background-image:
     url("img/bg-5.png");
     box-sizing: content-box;
     width: 100%;
-    min-height: 100vh;
     background-attachment: scroll;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    overflow: scroll;
 }
 #container {
     padding: 20px;
@@ -63,9 +61,10 @@ nav ul li a {
 .cards {
     padding-top: 50px;
     padding-left: 60px;
-    padding-right: 60px; 
+    padding-right: 60px;
 }
 .card {
+  display: inline-block;
     color: #323131;
     background-color: #ffffff;
     font-family: 'Oswald', sans-serif;
@@ -75,7 +74,6 @@ nav ul li a {
     padding: 1rem;
     margin: 0.8rem;
     max-width: 13.5rem;
-    float: left;
 }
 #filterSelect, #orderSelect {
     color: #ffffff;
@@ -89,7 +87,7 @@ nav ul li a {
     padding-left: 20px;
 }
 #statistics {
-    background-image: 
+    background-image:
     url("img/cinti-2.png");
     height: 450px;
 }
@@ -98,7 +96,7 @@ nav ul li a {
 }
 #installApp {
     background-image:
-    url("img/bg-install.png"); 
+    url("img/bg-install.png");
     height: 500px;
 }
 .containerText {
@@ -127,7 +125,7 @@ h1 {
 }
 h2 {
     font-family: 'Slackey', cursive;
-    color: #1A3BEA;  
+    color: #1A3BEA;
 }
 h3 {
     color: #323131;
@@ -140,5 +138,3 @@ h3 {
     font-family: 'Montserrat', sans-serif;
     color: #323131;
  }
- 
- 
