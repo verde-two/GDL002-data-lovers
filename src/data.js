@@ -23,6 +23,7 @@ const filterPoke = (data, type) => {
 
 //};
 
+//Función para calcular estadísticas
 window.data = {
     showPokemon,
     filterPoke

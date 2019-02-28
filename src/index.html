@@ -9,21 +9,32 @@
   </head>
   <body>
 
-    <nav>
-      <ul>
-        <li><a href=""><img src="img/pokediscover.png" width="150"></a></li>
-        <li><a href="">POKÉDEX</a></li>
-        <li><a href="">DESCUBRIR PRIMER POKÉMON</a></li>
-        <li><a href="">IR A ESTADÍSTICAS</a></li>
-        <li><a href="">INSTALAR POKÉMON GO</a></li>
-    </ul>
-    </nav>
-
+    <header>
+      <section class="wrapper">
+          <a id="logoNav" href="#">
+            <img src="img/pokediscover.png" width="180">
+          </a>
+        <nav>
+          <ul>
+            <li><a href="#main-interaction">POKÉDEX</a></li>
+            <li><a href="#">DESCUBRIR PRIMER POKÉMON</a></li>
+            <li><a href="#statistics">IR A ESTADÍSTICAS</a></li>
+            <li><a href="#installApp">INSTALAR POKÉMON GO</a></li>
+          </ul>
+        </nav>
+      </section> 
+    </header>
+ 
     <main id="main-interaction">
       <div id="container">
         <img src="img/pokedex.png" alt="" width="220">
         <h3>En la pokédex puedes encontrar todos los datos acerca de los 151 pokémon que existen en la región de Kanto, esto te ayudará a capturar tus pokémon favoritos.</h3>
-        <select name="select" id="filterSelect">
+        <select name="select order" id="orderSelect">
+            <option value="value1" selected>ORDENAR POR</option>
+            <option value="value2">A-Z</option>
+            <option value="value3">Z-A</option>
+        </select>
+        <select name="select filter" id="filterSelect">
             <option value="All" selected>FILTRAR POR TIPO</option>
             <option value="All">Todos los tipos</option>
             <option value="Normal">Normal</option> 
@@ -46,12 +57,26 @@
       </div>
     </main>
 
-    <section id="instalarApp">
-      <h2>Instalar Pokémon GO</h2>
-      <p>Ahora estás listo para iniciarte en la aventura pokémon</p>
-      <h1>!Descarga e instala la app!</h1>
-      <button>!Jugar ahora!</button>
-      <p>Para seguir aprendiendo sobre el juego puedes dirigirte <a href="">AQUÍ</a></p>
+    <section id="statistics">
+      <div class="statContainerText">
+          <h2>Estadísticas de evolución</h2>
+          <p>Arma un equipo de tres pokémon para combatir en un duelo y descubre contra qué tipos de pokémon tendrías menor probabilidad de ganar.</p>
+          <p>Instrucciones: Ingresa el nombre de tus tres pokémon y presiona el botón calcular para ver tus resultados.</p>
+          <input type="text" id="numPokeA">
+          <input type="text" id="numPokeB">
+          <input type="text" id="numPokeC">
+          <button id="calculate">¡Calcular!</button>
+      </div>
+    </section>
+
+    <section id="installApp">
+      <div class="containerText">
+          <h2>Instalar Pokémon GO</h2>
+          <p>Ahora estás listo para iniciarte en la aventura pokémon</p>
+          <h1>!Descarga e instala la app!</h1>
+          <button>!Jugar ahora!</button>
+          <p>Para seguir aprendiendo sobre el juego puedes dirigirte <a href="">AQUÍ</a></p>
+      </div>        
     </section>
 
     <footer>
