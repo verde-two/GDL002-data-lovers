@@ -14,8 +14,8 @@ describe('data', () => {
 
 //Test para función mostrar
 describe('showPokemon', () => {
-  it('should be a function', () => {
-    expect(typeof (data.showPokemon)).toBe('function');
+  it('should be a variable', () => {
+    expect(typeof (data.showPokemon)).toBe('variable');
   });
 });
 
@@ -43,7 +43,7 @@ describe('filterPoke',() => {
   });
 
    it('should go back an ordered array', () => {
-     expect(window.data.orderByNameAsc()).toEqual(pokemonOrderAsc);
+     expect(window.data.orderByNameAsc(/*original, order*/)).toEqual(pokemonOrderAsc);
    });
 
    //it('returns `example`', () => {

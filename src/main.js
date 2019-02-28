@@ -59,3 +59,6 @@ const addOrder = () => {
   createCards(orderResult);
 };
 document.getElementById('orderSelect').addEventListener("change", addOrder);
+
+
+//Función que obtenga el valor de los inputs de nombre de pokemon
