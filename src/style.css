@@ -1,0 +1,52 @@
+<<<<<<< Updated upstream
+=======
+* {
+    margin: 0;
+    text-align: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+#main-interaction {
+    background-image:
+    url("img/bg-5.png");
+    box-sizing: content-box;
+    width: 100%;
+    min-height: 100vh;
+    background-attachment: scroll;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.grid {
+    grid: display;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: repeat(9, 1fr);
+}
+.card {
+    color: #323131;
+    background-color: #ffffff;
+    font-family: 'Oswald', sans-serif;
+    line-height: 1.4rem;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 15px;
+    padding: 1rem;
+    margin: 0.8rem;
+    max-width: 14.5rem;
+    float: left;
+}
+nav {
+    font-family:  'Oswald', sans-serif;
+    font-size: 1.2rem;
+    color: #ffffff;
+    background-color: blue;
+}
+h3 {
+    color: #323131;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.125rem;
+    margin-top: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+>>>>>>> Stashed changes
