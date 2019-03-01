@@ -60,12 +60,15 @@
     <section id="statistics">
       <div class="statContainerText">
           <h2>Estadísticas de evolución</h2>
-          <p>Arma un equipo de tres pokémon para combatir en un duelo y descubre contra qué tipos de pokémon tendrías menor probabilidad de ganar.</p>
+          <p>Arma un equipo de tres pokémon para combatir en un duelo y conoce sus debilidades para armar tu estrategia.</p>
           <p>Instrucciones: Ingresa el nombre de tus tres pokémon y presiona el botón calcular para ver tus resultados.</p>
-          <input type="text" id="numPokeA">
-          <input type="text" id="numPokeB">
-          <input type="text" id="numPokeC">
+          <input type="text" id="namePokeA">
+          <input type="text" id="namePokeB">
+          <input type="text" id="namePokeC">
           <button id="calculate">¡Calcular!</button>
+          <div id="cardStatistics">
+            <p>Estas son las coincidencias de las debilidades que debes considerar para armar tu estrategia para el duelo poekmon</p>
+          </div>
       </div>
     </section>
 
@@ -84,7 +87,7 @@
     </footer>
 
     <script src="./data/pokemon/pokemon.js"></script>
-    <script src="data.js"></script>
+    <script src="data.js"></script>calculateWeakness
     <script src="main.js"></script>
   </body>
 </html>
