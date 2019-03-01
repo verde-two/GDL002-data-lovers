@@ -62,3 +62,11 @@ document.getElementById('orderSelect').addEventListener("change", addOrder);
 
 
 //Función que obtenga el valor de los inputs de nombre de pokemon
+const teamPoke = () => {
+  let input1 = 'Pikachu';
+  let input2 = 'Charmander';
+  let input3 = 'Charizard';
+  let allPokes = [input1,input2,input3];
+  let allTeam = data.calculateWeakness(allPokes);
+  console.log(allTeam);
+};

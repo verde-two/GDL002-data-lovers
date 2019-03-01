@@ -19,33 +19,59 @@ const filterPoke = (data, type) => {
   };*/
 
 
-//Función para ordenar tipos de pokémon alfabéticamente A-Z
 const orderByNameAsc = POKEMON.pokemon.map(poke => poke); //console.log(orderByNameAsc);
-orderByNameAsc.sort(function(original, order){
+orderByNameAsc.sort((original, order) => {
     return original.name.localeCompare(order.name);
 }); //console.log(orderByNameAsc);
+//Función para ordenar tipos de pokémon alfabéticamente A-Z
+/*const orderByNameAsc = POKEMON.pokemon.map(poke => poke); //console.log(orderByNameAsc);
+orderByNameAsc.sort(function(original, order){
+    return original.name.localeCompare(order.name);
+}); //console.log(orderByNameAsc);*/
 
 
 //Función para ordenar tipos de pokémon alfabéticamente Z-A
 const orderByNameDes = POKEMON.pokemon.map(poke => poke); //console.log(orderByNameAsc);
-orderByNameDes.sort(function(original, order){
+orderByNameDes.sort((original, order) => {
     return order.name.localeCompare(original.name);
 }); //console.log(orderByNameDes);
+/*const orderByNameDes = POKEMON.pokemon.map(poke => poke); //console.log(orderByNameAsc);
+orderByNameDes.sort(function(original, order){
+    return order.name.localeCompare(original.name);
+}); //console.log(orderByNameDes);*/
 
 
 //Función para calcular estadísticas
+const calculateWeakness = (arrPoke) => {
+    const filterByName = (data, namesPoke) => {
+            return data.filter( pokemon=> {
+                if(pokemon.name == namesPoke[0]  || pokemon.name == namesPoke[1] || pokemon.name == namesPoke[2]){
+                    return pokemon;
+                }
+            },namesPoke);
+        } //console.log(filterByName(POKEMON.pokemon, 'Pikachu'));
+    const bringWeak = filterByName(POKEMON.pokemon,arrPoke).map(team => team.weaknesses);
+    let waeksResult = bringWeak[0].concat(bringWeak[1],bringWeak[2]);
+    const weaknessReduce = (obj,item) =>{
+        const result = {
+            ...obj,
+        };
+        if(!obj[item]){
+            result[item] = 0;
+        }
+        result[item] +=1;
+        return result;
+    };
+    
 
- //const calculateWeak = () => {
-const filterByName = (data, name) => { //name debe asignarse en main.js para traer nombre de los 3 pokémon
-        return data.filter(pokemon => (pokemon.name == name));
-    } //console.log(filterByName(POKEMON.pokemon, 'Pikachu'));
-    const bringWeak = filterByName.map(team => team.weaknesses);
-    const calculateWeak = bringWeak.reduce((obj,item))
-//};
+    return waeksResult.reduce(weaknessReduce,{});
+};
+
 
 window.data = {
     showPokemon,
     filterPoke,
     orderByNameAsc,
     orderByNameDes,
+    calculateWeakness
 };
