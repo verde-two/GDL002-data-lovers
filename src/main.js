@@ -61,4 +61,19 @@ const addOrder = () => {
 document.getElementById('orderSelect').addEventListener("change", addOrder);
 
 
-//Función que obtenga el valor de los inputs de nombre de pokemon
+//Función que obtenga el valor de los inputs para llamar función calculateWeakness (función calcular)
+const teamPoke = () => {
+  let inputPokeA = document.getElementById('namePokeA').value;
+  let inputPokeB = document.getElementById('namePokeB').value;
+  let inputPokeC = document.getElementById('namePokeC').value;
+  let allPokes = [inputPokeA, inputPokeB, inputPokeC];
+  
+  let allTeam = data.calculateWeakness(allPokes);
+    for(let weakness in allTeam){
+      document.getElementById('statistics').innerHTML += `${weakness} : ${allTeam[weakness]}`;
+    }
+  
+};
+
+document.getElementById('calculate').addEventListener("click", teamPoke);
+
