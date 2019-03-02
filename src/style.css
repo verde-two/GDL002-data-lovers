@@ -1,5 +1,3 @@
-<<<<<<< Updated upstream
-=======
 * {
     margin: 0;
     text-align: center;
@@ -8,23 +6,71 @@
     -o-background-size: cover;
     background-size: cover;
 }
+
+.wrapper {
+    width: 85%;
+    margin: auto;
+    overflow:hidden;
+}
+#logoNav {
+    float: left;
+    padding: 22px 0 0 20px;
+}
+header {
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    background-image: linear-gradient(#0c17f5, #73c1f5);
+}
+nav {
+    float: right;
+}
+nav ul {
+    list-style: none;
+    overflow: hidden;
+}
+nav ul li {
+    font-family:  'Oswald', sans-serif;
+    font-size: 1.2rem;
+    color: #ffffff;
+    display: inline-block;
+    line-height: 80px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+}
+nav ul li a {
+    display: block;
+    text-decoration: none;
+}
 #main-interaction {
+    padding-top: 100px;
     background-image:
     url("img/bg-5.png");
     box-sizing: content-box;
     width: 100%;
-    min-height: 100vh;
     background-attachment: scroll;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-}
-.grid {
+}.grid {
     grid: display;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: repeat(9, 1fr);
 }
+
+#container {
+    padding: 20px;
+    justify-content: center;
+
+}
+.cards {
+    padding-top: 50px;
+    padding-left: 60px;
+    padding-right: 60px;
+}
 .card {
+  display: inline-block;
     color: #323131;
     background-color: #ffffff;
     font-family: 'Oswald', sans-serif;
@@ -33,14 +79,59 @@
     border-radius: 15px;
     padding: 1rem;
     margin: 0.8rem;
-    max-width: 14.5rem;
-    float: left;
+    max-width: 13.5rem;
 }
-nav {
-    font-family:  'Oswald', sans-serif;
-    font-size: 1.2rem;
+#filterSelect, #orderSelect {
     color: #ffffff;
-    background-color: blue;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.2rem;
+    width: 340px;
+    height: 40px;
+    background-color: #323131;
+    border: 0;
+    border-radius: 10px;
+    padding-left: 20px;
+}
+#statistics {
+    background-image:
+    url("img/cinti-2.png");
+    height: 450px;
+}
+.statContainerText {
+    padding-top: 100px;
+}
+#installApp {
+    background-image:
+    url("img/bg-install.png");
+    height: 500px;
+}
+.containerText {
+    width: 400px;
+    align-content: left;
+    padding-top: 100px;
+    padding-left: 80px;
+}
+.grid {
+    grid: display;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: repeat(9, 1fr);
+}
+footer {
+    font-family: 'Slackey', cursive;
+    font-size: 1rem;
+    color: #ffffff;
+    text-align: center;
+    padding-top: 1.6rem;
+    background-color: #151515;
+    height: 2.8rem;
+ }
+h1 {
+    font-family: 'Oswald', sans-serif;
+    color: #323131;
+}
+h2 {
+    font-family: 'Slackey', cursive;
+    color: #1A3BEA;
 }
 h3 {
     color: #323131;
@@ -49,4 +140,7 @@ h3 {
     margin-top: 1.8rem;
     margin-bottom: 1.5rem;
 }
->>>>>>> Stashed changes
+ p {
+    font-family: 'Montserrat', sans-serif;
+    color: #323131;
+}

@@ -1,8 +1,5 @@
-<<<<<<< Updated upstream
-document.getElementById('root').innerHTML = data.showPokemon ();
-=======
-//Itera sobre objeto para mostrar a usuario cards específicas
  const createCards = (data) => {
+
     let cards = document.getElementById('cards');
     while (cards.hasChildNodes()) {
         cards.removeChild(cards.firstChild);
@@ -36,7 +33,7 @@ const addingFilter = () =>{
   let select = document.getElementById('filterSelect');
   let valueSelect = select.value;
   let filterResult;
-  if (valueSelect == "All") {
+  if (valueSelect == 'All') {
     filterResult = data.showPokemon;
   } else {
     filterResult = data.filterPoke(POKEMON.pokemon, valueSelect);
@@ -46,16 +43,36 @@ const addingFilter = () =>{
 
 document.getElementById('filterSelect').addEventListener("change", addingFilter);
 
-const addOrder = () =>{
-  let select = document.getElementById('orderAZ');
-  let valueSave = select.value;
-  let optResult;
-  if (valueSave == "pushOrder") {
-    optResult = data.addOrder;
+//Función obtiene valor de select para llamar función orderByNameAsc y orderByNameDes (función ordenar)
+
+const addOrder = () => {
+  let select = document.getElementById('orderSelect');
+  let valueSelect = select.value;
+  let orderResult;
+  if(valueSelect == 'Asc'){
+    orderResult = data.orderByNameAsc;
+  } else if (valueSelect == 'Des'){
+    orderResult = data.orderByNameDes;
   } else {
-    optResult = data.orderAZ(POKEMON.pokemon,valueSave);
+    orderResult = data.showPokemon;
   }
-  createCards(optResult);
-}
-document.getElementById('orderAZ').addEventListener("change", addOrder);
->>>>>>> Stashed changes
+  createCards(orderResult);
+};
+document.getElementById('orderSelect').addEventListener("change", addOrder);
+
+
+//Función que obtenga el valor de los inputs para llamar función calculateWeakness (función calcular)
+const teamPoke = () => {
+  let inputPokeA = document.getElementById('namePokeA').value;
+  let inputPokeB = document.getElementById('namePokeB').value;
+  let inputPokeC = document.getElementById('namePokeC').value;
+  let allPokes = [inputPokeA, inputPokeB, inputPokeC];
+
+  let allTeam = data.calculateWeakness(allPokes);
+    for(let weakness in allTeam){
+      document.getElementById('statistics').innerHTML += `${weakness} : ${allTeam[weakness]}`;
+    }
+
+};
+
+document.getElementById('calculate').addEventListener("click", teamPoke);

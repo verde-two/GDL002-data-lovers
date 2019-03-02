@@ -1,69 +1,94 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
   <head>
     <meta charset="utf-8">
-    <title>Data Lovers</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pokediscover</title>
     <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Oswald|Slackey" rel="stylesheet">
   </head>
   <body>
-<<<<<<< Updated upstream
-    <div id="root"></div>
 =======
 
-    <nav>
-      <ul>
-        <li><a href=""><img src="img/pokediscover.png" width="150"></a></li>
-        <li><a href=""></a>POKÉDEX</a></li>
-        <li><a href=""></a>DESCUBRIR PRIMER POKÉMON</a></li>
-        <li><a href=""></a>IR A ESTADÍSTICAS</a></li>
-        <li><a href=""></a>INSTALAR POKÉMON GO</a></li>
-    </ul>
-    </nav>
+    <header>
+      <section class="wrapper">
+          <a id="logoNav" href="#">
+            <img src="img/pokediscover.png" width="180">
+          </a>
+        <nav>
+          <ul>
+            <li><a href="#main-interaction">POKÉDEX</a></li>
+            <li><a href="#">DESCUBRIR PRIMER POKÉMON</a></li>
+            <li><a href="#statistics">IR A ESTADÍSTICAS</a></li>
+            <li><a href="#installApp">INSTALAR POKÉMON GO</a></li>
+          </ul>
+        </nav>
+      </section>
+    </header>
 
     <main id="main-interaction">
-      <img src="img/pokedex.png" alt="" width="220">
-      <h3>En la pokédex puedes encontrar todos los datos acerca de los 151 pokémon que existen en la región de Kanto, esto te ayudará a capturar tus pokémon favoritos.</h3>
-      <select name="select" id="filterSelect">
-          <option value="value0">FILTRAR POR TIPO</option>
-          <option value="All" selected>Todos los tipos</option>
-          <option value="Normal">Normal</option>
-          <option value="Fire">Fuego</option>
-          <option value="Water">Agua</option>
-          <option value="Grass">Hierba / Planta</option>
-          <option value="Electric">Eléctrico</option>
-          <option value="Ice">Hielo</option>
-          <option value="Fighting">Lucha</option>
-          <option value="Poison">Veneno</option>
-          <option value="Ground">Tierra</option>
-          <option value="Rock">Roca</option>
-          <option value="Flying">Volador</option>
-          <option value="Psychic">Psíquico</option>
-          <option value="Bug">Insecto / Bicho</option>
-          <option value="Ghost">Fantasma</option>
-          <option value="Dragon">Dragon</option>
-          <option value="Dark">Siniestro</option>
-          <option value="Steel">Acero</option>
-          <option value="Fairy">Hada</option>
+      <div id="container">
+        <img src="img/pokedex.png" alt="" width="220">
+        <h3>En la pokédex puedes encontrar todos los datos acerca de los 151 pokémon que existen en la región de Kanto, esto te ayudará a capturar tus pokémon favoritos.</h3>
+        <select name="select order" id="orderSelect">
+            <option value="All" selected>ORDENAR POR</option>
+            <option value="Asc">A-Z</option>
+            <option value="Des">Z-A</option>
         </select>
-        <select name="select" id="orderAZ">
-            <option value="pushOrder" selected>Ordenar por A-Z</option>
-            <option value="value0">Ordenar por Z-A</option>
-        </select>
-      <div id="cards" class="grid">
+        <select name="select filter" id="filterSelect">
+            <option value="All" selected>FILTRAR POR TIPO</option>
+            <option value="All">Todos los tipos</option>
+            <option value="Normal">Normal</option>
+            <option value="Fire">Fuego (Fire)</option>
+            <option value="Water">Agua (Water)</option>
+            <option value="Grass">Hierba / Planta (Grass)</option>
+            <option value="Electric">Eléctrico (Electric)</option>
+            <option value="Ice">Hielo (Ice)</option>
+            <option value="Fighting">Lucha (Fighting)</option>
+            <option value="Poison">Veneno (Poison)</option>
+            <option value="Ground">Tierra (Ground)</option>
+            <option value="Rock">Roca (Rock)</option>
+            <option value="Flying">Volador (Flying)</option>
+            <option value="Psychic">Psíquico (Psychic)</option>
+            <option value="Bug">Insecto / Bicho (Bug)</option>
+            <option value="Ghost">Fantasma (Ghost)</option>
+            <option value="Dragon">Dragon</option>
+          </select>
+          <div id="cards" class="grid"></div>
       </div>
     </main>
 
-    <section>
-
+    <section id="statistics">
+      <div class="statContainerText">
+          <h2>Estadísticas de evolución</h2>
+          <p>Arma un equipo de tres pokémon para combatir en un duelo y conoce sus debilidades para armar tu estrategia.</p>
+          <p>Instrucciones: Ingresa el nombre de tus tres pokémon y presiona el botón calcular para ver tus resultados.</p>
+          <input type="text" id="namePokeA">
+          <input type="text" id="namePokeB">
+          <input type="text" id="namePokeC">
+          <button id="calculate">¡Calcular!</button>
+          <div id="cardStatistics">
+            <p>Estas son las coincidencias de las debilidades que debes considerar para armar tu estrategia para el duelo poekmon</p>
+          </div>
+      </div>
     </section>
-    <footer>
 
+    <section id="installApp">
+      <div class="containerText">
+          <h2>Instalar Pokémon GO</h2>
+          <p>Ahora estás listo para iniciarte en la aventura pokémon</p>
+          <h1>!Descarga e instala la app!</h1>
+          <button>!Jugar ahora!</button>
+          <p>Para seguir aprendiendo sobre el juego puedes dirigirte <a href="">AQUÍ</a></p>
+      </div>
+    </section>
+
+    <footer>
+        <p>Developed by DixelTeam, 2019</p>
     </footer>
 
->>>>>>> Stashed changes
     <script src="./data/pokemon/pokemon.js"></script>
-    <script src="data.js"></script>
+    <script src="data.js"></script>calculateWeakness
     <script src="main.js"></script>
   </body>
 </html>
