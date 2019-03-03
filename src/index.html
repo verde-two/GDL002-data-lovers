@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Pokediscover</title>
     <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css?family=Montserrat|Oswald|Slackey" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Oswald|Roboto|Slackey" rel="stylesheet">
   </head>
   <body>
 
@@ -28,46 +28,49 @@
     <main id="main-interaction">
       <div id="container">
         <img src="img/pokedex.png" alt="" width="220">
-        <h3>En la pokédex puedes encontrar todos los datos acerca de los 151 pokémon que existen en la región de Kanto, esto te ayudará a capturar tus pokémon favoritos.</h3>
-        <select name="select order" id="orderSelect">
-            <option value="All" selected>ORDENAR POR</option>
-            <option value="Asc">A-Z</option>
-            <option value="Des">Z-A</option>
-        </select>
-        <select name="select filter" id="filterSelect">
-            <option value="All" selected>FILTRAR POR TIPO</option>
-            <option value="All">Todos los tipos</option>
-            <option value="Normal">Normal</option> 
-            <option value="Fire">Fuego (Fire)</option>
-            <option value="Water">Agua (Water)</option>
-            <option value="Grass">Hierba / Planta (Grass)</option> 
-            <option value="Electric">Eléctrico (Electric)</option>
-            <option value="Ice">Hielo (Ice)</option>
-            <option value="Fighting">Lucha (Fighting)</option> 
-            <option value="Poison">Veneno (Poison)</option>
-            <option value="Ground">Tierra (Ground)</option>
-            <option value="Rock">Roca (Rock)</option> 
-            <option value="Flying">Volador (Flying)</option>
-            <option value="Psychic">Psíquico (Psychic)</option>
-            <option value="Bug">Insecto / Bicho (Bug)</option> 
-            <option value="Ghost">Fantasma (Ghost)</option>
-            <option value="Dragon">Dragon</option>
-          </select>
-          <div id="cards" class="grid"></div>
+        <h3>En la <span><a href="https://pokemon.fandom.com/es/wiki/Pok%C3%A9dex" target=”_blank”>pokédex</a></span> puedes encontrar todos los datos acerca de los 151 pokémon que existen en la <span><a href="https://pokemon.fandom.com/es/wiki/Kanto" target=”_blank”>región de Kanto</a></span>, <br/> esto te ayudará a capturar a tus pokémon favoritos.</h3>
+        <div class="selects">
+            <select name="select order" id="orderSelect">
+                <option value="All" selected>ORDENAR POR</option>
+                <option value="Asc">A-Z</option>
+                <option value="Des">Z-A</option>
+            </select>
+            <select name="select filter" id="filterSelect">
+                <option value="All" selected>FILTRAR POR TIPO</option>
+                <option value="All">Todos los tipos</option>
+                <option value="Normal">Normal</option> 
+                <option value="Fire">Fuego (Fire)</option>
+                <option value="Water">Agua (Water)</option>
+                <option value="Grass">Hierba / Planta (Grass)</option> 
+                <option value="Electric">Eléctrico (Electric)</option>
+                <option value="Ice">Hielo (Ice)</option>
+                <option value="Fighting">Lucha (Fighting)</option> 
+                <option value="Poison">Veneno (Poison)</option>
+                <option value="Ground">Tierra (Ground)</option>
+                <option value="Rock">Roca (Rock)</option> 
+                <option value="Flying">Volador (Flying)</option>
+                <option value="Psychic">Psíquico (Psychic)</option>
+                <option value="Bug">Insecto / Bicho (Bug)</option> 
+                <option value="Ghost">Fantasma (Ghost)</option>
+                <option value="Dragon">Dragon</option>
+              </select>
+        </div>
+        <div id="cards"></div>
       </div>
     </main>
 
     <section id="statistics">
-      <div class="statContainerText">
-          <h2>Estadísticas de evolución</h2>
-          <p>Arma un equipo de tres pokémon para combatir en un duelo y conoce sus debilidades para armar tu estrategia.</p>
-          <p>Instrucciones: Ingresa el nombre de tus tres pokémon y presiona el botón calcular para ver tus resultados.</p>
-          <input type="text" id="namePokeA">
-          <input type="text" id="namePokeB">
-          <input type="text" id="namePokeC">
-          <button id="calculate">¡Calcular!</button>
+      <div id="statContainerText">
+          <h2>Estadísticas de equipo</h2>
+          <div>
+              <p class="styleA">Arma un equipo de tres pokémon para combatir en un duelo y conoce sus debilidades para armar tu estrategia.<br/> Ingresa el nombre de tus tres pokémon y presiona el botón calcular para ver tus resultados.</p>
+              <input type="text" id="namePokeA" class="inputStyle" placeholder="Nombre de primer pokémon">
+              <input type="text" id="namePokeB" class="inputStyle" placeholder="Nombre de segundo pokémon">
+              <input type="text" id="namePokeC" class="inputStyle" placeholder="Nombre de tercer pokémon">
+          </div>
+          <button id="calculate">¡CALCULAR!</button>
           <div id="cardStatistics">
-            <p>Estas son las coincidencias de las debilidades que debes considerar para armar tu estrategia para el duelo poekmon</p>
+            <div id="resultsCont"></div>
           </div>
       </div>
     </section>
@@ -77,17 +80,21 @@
           <h2>Instalar Pokémon GO</h2>
           <p>Ahora estás listo para iniciarte en la aventura pokémon</p>
           <h1>!Descarga e instala la app!</h1>
-          <button>!Jugar ahora!</button>
-          <p>Para seguir aprendiendo sobre el juego puedes dirigirte <a href="">AQUÍ</a></p>
+          <div class="linkStyleButtonContainer">
+            <div class="linkStyleButton">
+                <a href="https://play.google.com/store/apps/details?id=com.nianticlabs.pokemongo&hl=es" target=”_blank”>!JUGAR AHORA!</a>
+            </div>    
+          </div>
+          <p>Para seguir aprendiendo sobre el juego puedes dirigirte <a href="https://www.geekno.com/pokemon-go" target=”_blank” class="highlight">AQUÍ</a></p>
       </div>        
     </section>
 
     <footer>
-        <p>Developed by DixelTeam, 2019</p>
+        <p class="pFooter">Developed by DixelTeam, 2019</p>
     </footer>
 
     <script src="./data/pokemon/pokemon.js"></script>
-    <script src="data.js"></script>calculateWeakness
+    <script src="data.js"></script>
     <script src="main.js"></script>
   </body>
 </html>
