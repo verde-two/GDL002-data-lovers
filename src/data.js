@@ -55,7 +55,6 @@ const calculateWeakness = (arrPoke) => {
         return result;
     };
     
-
     return waeksResult.reduce(weaknessReduce,{});
 };
 
