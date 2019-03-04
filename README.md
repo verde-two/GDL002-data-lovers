@@ -42,8 +42,6 @@ El usuario principal para el uso del sitio son adolescentes de género tanto fem
 
 11) El usuario necesita ver el logo del sitio en todas las pantallas con la funcionalidad para regresar al inicio dando click, excepto en la primera.
 
-All your files are listed in the file explorer. You can switch from one to another by clicking a file in the list.
-
 # EL PROCESO Y LA INTERFAZ DEL USUARIO
 
 Para la realización del proyecto se realizaron diversos prototipos diseñados para el usuario primeramente realizados en baja fidelidad y posteriormente en alta fidelidad para garantizar la comprensión y apropiación del sitio por parte del usuario. 
