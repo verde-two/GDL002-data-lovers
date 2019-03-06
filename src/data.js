@@ -14,9 +14,9 @@ const filterPoke = (data, type) => {
     return data.filter((pokemon) => pokemon.type.includes(type));
 };
 //Función para filtrar tipos de pokémon "puros"
-/*const filterPoke = (data, pokeType) => {
+const filterPoke = (data, pokeType) => {
     return data.filter(pokemon => (pokemon.type == pokeType));
-  };*/
+  };
 
 
 const orderByNameAsc = POKEMON.pokemon.map(poke => poke); //console.log(orderByNameAsc);
@@ -24,10 +24,10 @@ orderByNameAsc.sort((original, order) => {
     return original.name.localeCompare(order.name);
 }); //console.log(orderByNameAsc);
 //Función para ordenar tipos de pokémon alfabéticamente A-Z
-/*const orderByNameAsc = POKEMON.pokemon.map(poke => poke); //console.log(orderByNameAsc);
+const orderByNameAsc = POKEMON.pokemon.map(poke => poke); //console.log(orderByNameAsc);
 orderByNameAsc.sort(function(original, order){
     return original.name.localeCompare(order.name);
-}); //console.log(orderByNameAsc);*/
+}); //console.log(orderByNameAsc);
 
 
 //Función para ordenar tipos de pokémon alfabéticamente Z-A
@@ -35,10 +35,10 @@ const orderByNameDes = POKEMON.pokemon.map(poke => poke); //console.log(orderByN
 orderByNameDes.sort((original, order) => {
     return order.name.localeCompare(original.name);
 }); //console.log(orderByNameDes);
-/*const orderByNameDes = POKEMON.pokemon.map(poke => poke); //console.log(orderByNameAsc);
+const orderByNameDes = POKEMON.pokemon.map(poke => poke); //console.log(orderByNameAsc);
 orderByNameDes.sort(function(original, order){
     return order.name.localeCompare(original.name);
-}); //console.log(orderByNameDes);*/
+}); //console.log(orderByNameDes);
 
 
 //Función para calcular estadísticas
@@ -49,12 +49,14 @@ const calculateWeakness = (arrPoke) => {
                     return pokemon;
                 }
             },namesPoke);
-        } //console.log(filterByName(POKEMON.pokemon, 'Pikachu'));
+        }; //console.log(filterByName(POKEMON.pokemon, 'Pikachu'));
+
+
     const bringWeak = filterByName(POKEMON.pokemon,arrPoke).map(team => team.weaknesses);
     let waeksResult = bringWeak[0].concat(bringWeak[1],bringWeak[2]);
     const weaknessReduce = (obj,item) =>{
         const result = {
-            ...obj,
+          ...obj,
         };
         if(!obj[item]){
             result[item] = 0;
@@ -69,9 +71,9 @@ const calculateWeakness = (arrPoke) => {
 
 
 window.data = {
-    showPokemon,
-    filterPoke,
-    orderByNameAsc,
+   showPokemon,
+   filterPoke,
+   orderByNameAsc,
     orderByNameDes,
-    calculateWeakness
+   calculateWeakness
 };

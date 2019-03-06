@@ -1,4 +1,4 @@
- const createCards = (data) => {
+const createCards = (data) => {
 
     let cards = document.getElementById('cards');
     while (cards.hasChildNodes()) {
