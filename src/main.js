@@ -1,3 +1,14 @@
+//Funcion que obtiene valor del quiz
+const quizQuestion = () => {
+  let seveResult = document.getElementById('statContainerText').checkbox;
+  //let firstResult
+
+  console.log(seveResult);
+}
+quizQuestion (statContainerText);
+
+document.getElementById('statContainerText').addEventListener("click", quizQuestion);
+
 const createCards = (data) => {
 
     let cards = document.getElementById('cards');
@@ -63,16 +74,31 @@ document.getElementById('orderSelect').addEventListener("change", addOrder);
 
 //Función que obtenga el valor de los inputs para llamar función calculateWeakness (función calcular)
 const teamPoke = () => {
+//Obtener los valores de los inputs con info del usuario
   let inputPokeA = document.getElementById('namePokeA').value;
   let inputPokeB = document.getElementById('namePokeB').value;
   let inputPokeC = document.getElementById('namePokeC').value;
   let allPokes = [inputPokeA, inputPokeB, inputPokeC];
-
+//Arrojar resultados de función estadísticas
   let allTeam = data.calculateWeakness(allPokes);
-    for(let weakness in allTeam){
-      document.getElementById('statistics').innerHTML += `${weakness} : ${allTeam[weakness]}`;
-    }
+//Mostrar resultados en DOM
+  let resultsContainer = document.getElementById('resultsCont');
+  while (resultsContainer.hasChildNodes()) {
+    resultsContainer.removeChild(resultsContainer.firstChild);
+  }
+  let instructions = document.createElement('P');
+  let instructionText = document.createTextNode('Estas son las coincidencias de las debilidades que debes considerar para armar tu estrategia en el duelo pokémon');
+  instructions.appendChild(instructionText);
+  resultsContainer.appendChild(instructions);
 
+    for(let weakness in allTeam){
+      let results = document.createElement('P');
+      results.setAttribute('class', 'resultStatistics');
+      let resultsText = document.createTextNode(`${weakness} : ${allTeam[weakness]}`);
+      results.appendChild(resultsText);
+      resultsContainer.appendChild(results);
+    }
+    document.getElementById('statContainerText').appendChild(resultsContainer);
 };
 
 document.getElementById('calculate').addEventListener("click", teamPoke);

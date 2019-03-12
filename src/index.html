@@ -5,70 +5,121 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Pokediscover</title>
     <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css?family=Montserrat|Oswald|Slackey" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Oswald|Roboto|Slackey" rel="stylesheet">
   </head>
   <body>
-=======
 
     <header>
       <section class="wrapper">
-          <a id="logoNav" href="#">
+          <a id="logoNav" href="#index">
             <img src="img/pokediscover.png" width="180">
           </a>
         <nav>
           <ul>
             <li><a href="#main-interaction">POKÉDEX</a></li>
-            <li><a href="#">DESCUBRIR PRIMER POKÉMON</a></li>
+            <li><a href="#discover">DESCUBRIR PRIMER POKÉMON</a></li>
             <li><a href="#statistics">IR A ESTADÍSTICAS</a></li>
             <li><a href="#installApp">INSTALAR POKÉMON GO</a></li>
           </ul>
         </nav>
       </section>
     </header>
-
+    <main id ="index">
+      <div id="newIndex">
+        <img src="img/pokediscover.png" width="300">
+        <h3> Aquí podrás encontrar el camino para ser un gran maestro pokémon y adentrarte al juego de POKEMON GO</h3>
+        <h3>Si quieres iniciarte en pokémon descubre a tu primer pokémon</h3>
+            <button id="goDiscover" onclick="window.location.href='#discover'"> ¡Descubrir pokémon! </button>
+        <h3>Si ya eres un entrenador pokémon visita la pokédex </h3>
+            <button id="pokedex" onclick="window.location.href='#main-interaction'">¡Ver pokédex!</button>
+           </select>
+      </div>
+    </main>
+    <main id="discover">
+      <div id="statContainerText">
+        <h3>Estás por descubrir a tu primer pokémon, responde el quiz para saber qué tipo de elemento eres y cuál será tu pokémon.</h3>
+        <dl>
+            <dt class="left"><h2>¿Qué estación del año te gusta más?</h2>
+            <img src="img/estaciones.png" class="right" width="220">
+              <dd><label><input type="checkbox" name="checkbox" value="Verano">Verano</label>
+                   <input type="checkbox" name="checkbox" value="Otoño"> <label for="Otoño">Otoño</label>
+                   <input type="checkbox" name="checkbox" value="Invierno"> <label for="Invierno">Invierno</label>
+                   <input type="checkbox" name="checkbox" value="Primavera"> <label for="Primavera">Primavera</label>
+               </dd>
+            </dt>
+            <dt class="left"><h2>En tu grupo de amigos ¿Qué característica te define?</h2>
+            <img src="img/emociones.jpg" class="right" width="200">
+               <dd  class="left"><label><input type="checkbox" id="secondQuestion" value="Alma Libre">Alma Libre</label>
+                   <input type="checkbox" id="" value="Tranquilo"> <label for="Tranquilo">Tranquilo</label>
+                   <input type="checkbox" id="" value="Alegre"> <label for="Alegre">Alegre</label>
+                   <input type="checkbox" id="" value="Humilde"> <label for="Humilde">Humilde</label>
+                   <input type="checkbox" id="" value="Divertido"> <label for="Divertido">Divertido</label>
+                   <input type="checkbox" id="" value="Amistoso"> <label for="Amistoso">Amistoso</label>
+                   <input type="checkbox" id="" value="Fuerte"> <label for="Fuerte">Fuerte</label>
+                   <input type="checkbox" id="" value="Adaptable"> <label for="Adaptable">Adaptable</label>
+               </dd>
+            </dt>
+            <dt><h2> Si pudieras controlar un fenómeno de la naturaleza ¿Cuál sería?</h2>
+            <img src="img/desastresnaturales.jpg" class="right" width="200">
+               <dd class="left"><label><input type="checkbox" id="thirdQuestion" value="Erupción volcánica">Erupción volcánica</label>
+                   <input type="checkbox" id="" value="Huracán"> <label for="Huracán">Huracán</label>
+                   <input type="checkbox" id="" value="Fenómeno inexplicable"> <label for="Fenómeno inexplicable">Fenómeno inexplicable</label>
+                   <input type="checkbox" id="" value="Remolino"> <label for="Remolino">Remolino</label>
+                   <input type="checkbox" id="" value="Un terremoto"> <label for="Un terremoto">Un terremoto</label>
+                   <input type="checkbox" id="" value="Ola gigante"> <label for="Ola gigante">Ola gigante</label>
+                   <input type="checkbox" id="" value="Rayos del sol"> <label for="Rayos del sol">Rayos del sol</label>
+                   <input type="checkbox" id="" value="Tornado"> <label for="Tornado">Tornado</label>
+               </dd>
+            </dt>
+          </dl>
+      </div>
+    </main>
     <main id="main-interaction">
       <div id="container">
         <img src="img/pokedex.png" alt="" width="220">
-        <h3>En la pokédex puedes encontrar todos los datos acerca de los 151 pokémon que existen en la región de Kanto, esto te ayudará a capturar tus pokémon favoritos.</h3>
-        <select name="select order" id="orderSelect">
-            <option value="All" selected>ORDENAR POR</option>
-            <option value="Asc">A-Z</option>
-            <option value="Des">Z-A</option>
-        </select>
-        <select name="select filter" id="filterSelect">
-            <option value="All" selected>FILTRAR POR TIPO</option>
-            <option value="All">Todos los tipos</option>
-            <option value="Normal">Normal</option>
-            <option value="Fire">Fuego (Fire)</option>
-            <option value="Water">Agua (Water)</option>
-            <option value="Grass">Hierba / Planta (Grass)</option>
-            <option value="Electric">Eléctrico (Electric)</option>
-            <option value="Ice">Hielo (Ice)</option>
-            <option value="Fighting">Lucha (Fighting)</option>
-            <option value="Poison">Veneno (Poison)</option>
-            <option value="Ground">Tierra (Ground)</option>
-            <option value="Rock">Roca (Rock)</option>
-            <option value="Flying">Volador (Flying)</option>
-            <option value="Psychic">Psíquico (Psychic)</option>
-            <option value="Bug">Insecto / Bicho (Bug)</option>
-            <option value="Ghost">Fantasma (Ghost)</option>
-            <option value="Dragon">Dragon</option>
-          </select>
-          <div id="cards" class="grid"></div>
+        <h3>En la <span><a href="https://pokemon.fandom.com/es/wiki/Pok%C3%A9dex" target="_blank">pokédex</a></span> puedes encontrar todos los datos acerca de los 151 pokémon que existen en la <span><a href="https://pokemon.fandom.com/es/wiki/Kanto" target="_blank">región de Kanto</a></span>, <br/> esto te ayudará a capturar a tus pokémon favoritos.</h3>
+        <div class="selects">
+            <select name="select order" id="orderSelect">
+                <option value="All" selected>ORDENAR POR</option>
+                <option value="Asc">A-Z</option>
+                <option value="Des">Z-A</option>
+            </select>
+            <select name="select filter" id="filterSelect">
+                <option value="All" selected>FILTRAR POR TIPO</option>
+                <option value="All">Todos los tipos</option>
+                <option value="Normal">Normal</option>
+                <option value="Fire">Fuego (Fire)</option>
+                <option value="Water">Agua (Water)</option>
+                <option value="Grass">Hierba / Planta (Grass)</option>
+                <option value="Electric">Eléctrico (Electric)</option>
+                <option value="Ice">Hielo (Ice)</option>
+                <option value="Fighting">Lucha (Fighting)</option>
+                <option value="Poison">Veneno (Poison)</option>
+                <option value="Ground">Tierra (Ground)</option>
+                <option value="Rock">Roca (Rock)</option>
+                <option value="Flying">Volador (Flying)</option>
+                <option value="Psychic">Psíquico (Psychic)</option>
+                <option value="Bug">Insecto / Bicho (Bug)</option>
+                <option value="Ghost">Fantasma (Ghost)</option>
+                <option value="Dragon">Dragon</option>
+              </select>
+        </div>
+        <div id="cards"></div>
       </div>
     </main>
 
     <section id="statistics">
-      <div class="statContainerText">
-          <h2>Estadísticas de evolución</h2>
-          <p>Arma un equipo de tres pokémon para combatir en un duelo y conoce sus debilidades para armar tu estrategia.</p>
-          <p>Instrucciones: Ingresa el nombre de tus tres pokémon y presiona el botón calcular para ver tus resultados.</p>
-          <input type="text" id="namePokeA">
-          <input type="text" id="namePokeB">
-          <input type="text" id="namePokeC">
-          <button id="calculate">¡Calcular!</button>
+      <div id="statContainerText">
+          <h2>Estadísticas de equipo</h2>
+          <div>
+              <p class="styleA">Arma un equipo de tres pokémon para combatir en un duelo y conoce sus debilidades para armar tu estrategia.<br/> Ingresa el nombre de tus tres pokémon y presiona el botón calcular para ver tus resultados.</p>
+              <input type="text" id="namePokeA" class="inputStyle" placeholder="Nombre de primer pokémon">
+              <input type="text" id="namePokeB" class="inputStyle" placeholder="Nombre de segundo pokémon">
+              <input type="text" id="namePokeC" class="inputStyle" placeholder="Nombre de tercer pokémon">
+          </div>
+          <button id="calculate">¡CALCULAR!</button>
           <div id="cardStatistics">
-            <p>Estas son las coincidencias de las debilidades que debes considerar para armar tu estrategia para el duelo poekmon</p>
+            <div id="resultsCont"></div>
           </div>
       </div>
     </section>
@@ -78,17 +129,21 @@
           <h2>Instalar Pokémon GO</h2>
           <p>Ahora estás listo para iniciarte en la aventura pokémon</p>
           <h1>!Descarga e instala la app!</h1>
-          <button>!Jugar ahora!</button>
-          <p>Para seguir aprendiendo sobre el juego puedes dirigirte <a href="">AQUÍ</a></p>
-      </div>
-    </section>
+          <div class="linkStyleButtonContainer">
+           <div class="linkStyleButton">
+               <a href="https://play.google.com/store/apps/details?id=com.nianticlabs.pokemongo&hl=es" target="_blank">!JUGAR AHORA!</a>
+           </div>
+         </div>
+         <p>Para seguir aprendiendo sobre el juego puedes dirigirte <a href="https://www.geekno.com/pokemon-go" target="_blank" class="highlight">AQUÍ</a></p>
+     </div>
+   </section>
 
-    <footer>
-        <p>Developed by DixelTeam, 2019</p>
-    </footer>
+   <footer>
+       <p class="pFooter">Developed by DixelTeam, 2019</p>
+   </footer>
 
-    <script src="./data/pokemon/pokemon.js"></script>
-    <script src="data.js"></script>calculateWeakness
-    <script src="main.js"></script>
-  </body>
+   <script src="./data/pokemon/pokemon.js"></script>
+   <script src="data.js"></script>
+   <script src="main.js"></script>
+ </body>
 </html>
